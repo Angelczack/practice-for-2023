@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        //全局变量  使用范围 在全局作用域内都可以使用       可以复用  有时会造成全局污染
+        var i = 10;
+
+        var a = 10;
+        var b = 10;
+        var c = 10;
+        var d = 10;
+        var e = 10;
+        var f = 10;
+
+        function abc() {
+            //局部变量  使用范围：在局部作用域（函数体内部）内部可使用      不可复用
+            var c = 10;
+            i++;
+            c++;
+            console.log(i);  //11
+            console.log(c);  //11
+        }
+        abc();
+        console.log(i);  //11
+        console.log(c);  //referenceError
+        */
+
+
+        // var i = 0;
+        //     function getNum() {
+        //         i++;
+        //         console.log(i);
+        //     }
+
+        //     getNum(); 
+        //     getNum(); 
+        //     i=0;
+        //     getNum(); 
+        //     getNum();
+        //     getNum();
+
+        // 闭包 本质上是一个函数    内层函数 外层函数  优点:既可复用变量，也不会被全局污染
+        function outer() {
+            // 局部变量
+            var i=0;
+            return function() {
+                i++;
+                console.log(i);
+            }
+        }
+
+        var getNum = outer();
+
+        getNum();
+        getNum();
+        i=1000;
+        getNum();
+        getNum();
+        getNum();
+    </script>
+</body>
+
+</html>
