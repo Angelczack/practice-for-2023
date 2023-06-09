@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .d1 {
+            width: 800px;
+            height: 800px;
+            background-color: lightgreen;
+        }
+        .d1:hover{
+            background-color: skyblue;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button class="btn1">显示</button>
+    <button class="btn2">隐藏</button>
+    <button class="btn3">切换</button>
+    <div class="d1"></div>
+
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        $(".btn1").click(function () {       //函数的参数也是一个函数，这种形式也叫做    回调函数 b(1,2)
+            // $(".d1").show();
+            // $(".d1").slideDown();
+            $(".d1").fadeIn();
+        })
+        $(".btn2").click(function () {       //函数的参数也是一个函数，这种形式也叫做    回调函数 b(1,2)
+            // $(".d1").hide();
+            // $(".d1").slideUp();
+            $(".d1").fadeOut();
+        })
+        $(".btn3").click(function () {       //函数的参数也是一个函数，这种形式也叫做    回调函数 b(1,2)
+            // $(".d1").toggle();
+            // $(".d1").slideToggle();
+            $(".d1").fadeToggle();
+        })
+    </script>
+</body>
+
+</html>
