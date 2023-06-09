@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 300px;
+            background-color: lightsalmon;
+            /* 子元素在父元素中排列顺序 默认：从左到右 */
+            flex-direction: row;
+        }
+        .box>div:hover{
+            transform: scale(1.5)rotate(180deg);
+            /* transform: translateX(100px); */
+            transition: all 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="d1" style="width: 100px; height: 100px; background-color: red; order: 10;"></div>
+        <div class="d2" style="width: 100px; height: 100px; background-color: green; order: 5;"></div>
+        <div class="d3" style="width: 100px; height: 100px; background-color: blue;order: 15;"></div>
+        <div class="d4" style="width: 100px; height: 100px; background-color: pink; order: 3;"></div>
+    </div>
+
+    <script>
+        document.getElementsByClassName("box").style
+    </script>
+</body>
+
+</html>

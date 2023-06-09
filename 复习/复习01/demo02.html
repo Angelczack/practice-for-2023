@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id选择器  #div01{    }*/
+        /* 类选择器 .d1{    }*/
+        /* 通配符选择器 页面所以标签 *{ }*/
+        /* 标签选择器 div{  }*/
+        /* 后代选择器 .d1 div{  }*/
+        /* 子元素选择器 找符合条件的直接子元素  .d1>div{    }*/
+
+        /* 伪类选择器 */
+        a:link{color: red;}
+        a:hover{color: blue;}
+        a:active{color: yellow;}
+        a:visited{color: pink;}
+
+        #div01{background-color: red;}
+
+        .d1{background-color: yellow;}
+    </style>
+</head>
+<body>
+    <div class="d1" id="div01">
+        <div>Lorem, ipsum.
+            <div>Lorem, ipsum dolor.</div>
+        </div>
+        <span>Lorem, ipsum.
+            <div>Lorem, ipsum dolor.</div>
+        </span>
+    </div>
+    <a href="#">跳转百度</a>
+</body>
+</html>

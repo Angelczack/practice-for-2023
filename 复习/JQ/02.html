@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="d1">
+        <p id="p1">p1</p>
+        <p id="p2">p2</p>
+        <p id="p3">p3</p>
+        <p id="p4">p4</p>
+    </div>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        var $p = $("<p>我是p0</p>");
+        // 在末尾追加
+        // $("#d1").append($p);
+        // 在开头追加
+        // $("#d1").prepend($p);
+
+        // $("#p2").before($p);
+        // $("#p3").after($p);
+
+        // 删除某一个元素
+        // $("#p4").remove();
+
+        // 替换某一个元素
+        // $("#p2").replaceWith($p);
+
+        // 克隆一个元素
+        // var $pp1 = $("#p1").clone();
+        // console.log($pp1);
+        // $("#d1").append($pp1);
+
+        //each遍历元素
+        // i是遍历每一项的下标
+        //obj是遍历每一项的元素
+        $("#d1 p").each(function (i,obj) {
+            console.log(i);
+            console.log(obj);
+            $(obj).html("内容"+(i+1));
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 链接外部 文件 -->
+    <script src="xxx"></script>
+    <!-- 内部脚本块 -->
+    <script>
+        var num = 12;
+        var str = "乔伟";
+        var isshow = true;
+        var abc = null;
+        var cde = undefined;
+
+
+        // 引用类型
+        var arr = new Array("1", "2", "3");   //数组        new实例化
+        var obj = new Object();   //对象
+        var fun = new Function();   //函数
+        var rex = new RegExp();     //正则表达式对象
+        var date = new Date();     //日期时间对象
+        var err = new Error();     //错误对象
+
+        var uname = "乔伟";
+        console.log(uname);
+        alert(uname);
+        document.write(uname);
+
+
+        var num1 = "235";
+        var num2 = "150px";
+        var num3 = "150.95px";
+        var num4 = "qiaowei150.95px";
+        var num5 = "20e10px";
+
+        console.log(typeof (num1));
+        console.log(Number(num1));  //数字
+        console.log(typeof (Number(num2)));
+        console.log(parseInt(num2));  //取数字部分
+        console.log(parseFloat(num3));  //取数字加小数部分
+        console.log(parseFloat(num4));  //nan
+        console.log(parseFloat(num5));  //科学 计数法
+
+        var students = [
+            { name: "qw", age: 18, id: 1 },
+            { name: "qw", age: 18, id: 1 },
+            { name: "qw", age: 18, id: 1 },
+            { name: "qw", age: 18, id: 1 },
+            { name: "qw", age: 18, id: 1 }
+        ]
+        var newstu = JSON.stringify(students);   //将Json对象转换为json字符串
+        console.log(newstu);
+        var nstu = JSON.parse(newstu);   //将json字符串转换为json对象
+        console.log(nstu);
+
+        //数组常用API
+        var arr1 = ["2023", "6", "3"];
+        console.log(arr1.join("/"));
+        var arr2 = [3, 4, 5];
+        var arr3 = [6, 7, 8, 9];
+        console.log(arr2.concat(arr3));
+
+        var arr4 = [96,52,2,3,65,24,12,6];
+        // a-b 从小到大 b-a从大到小
+        console.log(arr4.sort( function(a,b){return b-a;}));
+
+        var arr5 =[1,2,3,4,5,6];
+        console.log(arr5.reverse());
+
+        var arr6 = [4,5,6,7,8,9,10];
+        // 0 1 2 3 4 5 6
+        console.log(arr6.slice(2,4)) //下标 含头不含尾 6 7
+        var arr7 = [1,2,3,4,5,6];
+        arr7.push(7);
+        arr7.pop();
+        arr7.unshift(0);
+        arr7.shift();
+        console.log(arr7);
+
+        var arr8 = [1,2,3,4,5,5,4,3,2,1];
+        // 0 1 2 3 4 5 6 7 8 9
+        console.log(arr8.indexOf(5));
+        console.log(arr8.lastIndexOf(5));
+
+        // 字符串的常用API
+        var str1 = "321088200212318610";
+
+        console.log(str1.slice(6,14));  //  开始下标 结束下标   含头不含尾  支持负数下标
+        console.log(str1.substring(6,14));  //  开始下标 结束下标   含头不含尾
+        console.log(str1.substr(6,8));  //  开始下标 截取的个数
+
+        var str2 = "Hellow JavaScript";
+        console.log(str2.toUpperCase(str2));
+        console.log(str2.toLowerCase(str2));
+
+        var str3 = "qiaoqiaoqiao";
+        console.log(str3.indexOf("o")); //3
+        console.log(str3.lastIndexOf("o")); // 11
+
+        var num2 = 250;
+        console.log(num2.toString());
+
+        // 随机数 Math
+        console.log(Math.random());
+        console.log(Math.random());
+        console.log(Math.random());
+        console.log(Math.random());
+        console.log(Math.random());
+
+    </script>
+</body>
+
+</html>

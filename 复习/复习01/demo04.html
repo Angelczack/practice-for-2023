@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelczack</title>
+    <style>
+        .box{
+            background-color: #000;
+            /* 第一种清浮动 */
+            /* overflow: hidden; */
+        }
+        .box::after{
+            display: block;
+            clear: both;
+            content: "";
+            visibility: hidden;
+            height: 0;
+        }
+        .left,.right{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+     <!-- 第二种清浮动 -->
+    <div class="box">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Officia, asperiores eum!</li>
+        <li>Accusantium, suscipit fugiat.</li>
+        <li>Dolor, ipsum atque.</li>
+        <li>Iure, obcaecati laborum.</li>
+    </ul>
+    <a href="" id="a1" class="a01" title="lenovo" style="color: red;">Lorem ipsum dolor sit amet.</a>
+    <input type="text" value="hellowworld" id="inp1">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        // console.log($);
+        $("li").css("color", "red").css("background", "blue").css("font-size", "30px");
+
+        //css("xxx")传输一个参数代表获取某css的属性值 css("xxx","xxx")传输两个参数代表修改css某个属性的值
+        console.log($("li").css("color"));
+        $("li").css("color", "#000");
+
+
+        console.log($("#a1").html());      //获取HTML内容
+        $("#a1").html("LENOVO");           //修改html内容
+
+        console.log($("#a1").attr("title"));    //获取属性值
+        $("#a1").attr("title", "lenovoedu");     //修改属性值
+
+        console.log($("#a1").css("color")); //获取样式值
+        $("#a1").css("color", "blue");   //修改样式值
+
+        console.log($("#inp1").val()); ///获取value值
+        $("#inp1").val("张三");  //修改样式值
+    </script>
+</body>
+
+</html>

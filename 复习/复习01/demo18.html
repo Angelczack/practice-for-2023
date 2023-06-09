@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo18</title>
+</head>
+
+<body>
+    <script>
+        var timer01 = setTimeout(task01, 1000);
+        var timer02 = setInterval(task02, 1000);
+        var i = 10;
+
+        function task01() {
+            document.write("setTimeout<br>");
+        }
+        function task02() {
+            if(i>0){
+               document.write("setInterval,rest" + i + "seconds<br>");
+            i--; 
+            }
+            else if(i==0){
+                document.write("setInterval,rest" + i + "seconds<br>");
+                document.write("its over");
+                clearInterval(timer02);
+            }       
+        }
+    </script>
+</body>
+
+</html>

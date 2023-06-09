@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+         //web storeage  浏览器存储 包含两部分
+         //临时存储(会话存储) sessionStorage  关闭浏览器,数据消失
+         //永久存储(本地存储) localStorage    除非用户手动删除,否则数据不会消失
+
+         var qw = {     //当前登录用户的信息
+            name:"qiaowei",
+            id:101,
+            phoneNumber:"12345678901"
+         }
+
+        //  保存数据到临时存储中
+        sessionStorage.setItem("id",qw.id);
+        sessionStorage.setItem("name",qw.name);
+        sessionStorage.setItem("phoneNumber",qw.phoneNumber);
+
+        // 从临时存储中获取数据
+        // sessionStorage.getItem("phoneNumber");
+        console.log(sessionStorage.getItem("id"));
+        console.log(sessionStorage.getItem("name"));
+        console.log(sessionStorage.getItem("phoneNumber"));
+
+        // 从临时存储中删除
+        sessionStorage.removeItem("id");
+
+        // 清空临时存储数据
+        sessionStorage.clear();
+
+
+
+        
+        //  保存数据到临时存储中
+        localStorage.setItem("id",qw.id);
+        localStorage.setItem("name",qw.name);
+        localStorage.setItem("phoneNumber",qw.phoneNumber);
+
+        // 从临时存储中获取数据
+        // sessionStorage.getItem("phoneNumber");
+        console.log(localStorage.getItem("id"));
+        console.log(localStorage.getItem("name"));
+        console.log(localStorage.getItem("phoneNumber"));
+
+        // 从临时存储中删除
+        localStorage.removeItem("id");
+
+        // 清空临时存储数据
+        localStorage.clear();
+    </script>
+</body>
+
+</html>

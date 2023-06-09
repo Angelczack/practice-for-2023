@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .d1{
+             
+        }
+        #div1{
+
+        } */
+    </style>
+</head>
+<body>
+    <div class="d1" id="div1">
+        <div>Lorem ipsum dolor sit amet consectetur.</div>
+    </div>
+    <span class="d1">
+        Lorem, ipsum.
+    </span>
+    <p>
+        <input type="radio" name="sex" id=""> 男
+        <input type="radio" name="sex" id=""> 女
+    </p>
+
+    <script>
+        var divs = document.getElementsByClassName("d1");
+        console.log(divs);
+        var div1 = document.getElementById("div1");
+        console.log(div1);
+        var ds = document.getElementsByTagName("div");
+        console.log(ds);
+        var ints = document.getElementsByName("sex");   //name属性
+        console.log(ints);
+
+        var divs = document.querySelectorAll("div");    //所有符合选择器的标签集合
+        console.log(divs);
+        var di = document.querySelector("div");         //查找一个符合选择器的标签
+        console.log(di);
+        di.onclick = function(){}
+        di.ondblclick = function(){}
+        di.onmouseout = function(){}
+        di.onmouseover = function(){}
+        di.onfocus = function(){}
+        di.onblur = function(){}
+        di.onkeydown = function(){}
+        di.onkeyup = function(){}
+        di.onchange = function(){}
+        di.onsubmit = function(){}
+
+        window.onload = function() {}   //页面加载完毕事件
+    </script>
+</body>
+</html>

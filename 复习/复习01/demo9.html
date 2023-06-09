@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //把所有帖子类表数据，展示到页面
+        getXhr();
+         function getXhr(){
+            //原生ajax请求
+            var xhr = new XMLHttpRequest();
+            // 同步：等待服务器结果，拿到结果程序往后执行
+            // 异步：不等待服务端结果，程序直接往后执行(默认)
+            xhr.open("get","http://jsonplaceholder.typicode.com/posts",true);
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4 && xhr.status ==200) {
+                    var res = xhr.response;
+                    console.log(res);
+                    var res =JSON.parse(xhr.response);
+                    console.log(res);
+
+                    var htmlstr="";
+                    for(var i=0;i<res.length;i++){
+                        htmlstr += `<div>${res[i].title}</div><div>${res[i].body}</div>`;
+                        document.write(htmlstr);
+                    }
+                }
+            }
+
+         }
+    </script>
+</body>
+</html>
