@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向对象</title>
+</head>
+
+<body>
+    <script>
+        //对象 object
+        //对象的封装
+        //1、对象直接量形式
+        var az = {
+            name: "Angelczack",
+            age: 101,
+            intro: function () {
+                return "hello! I am " + this.name + ", I am " + this.age + "!";
+            }
+        }
+
+        console.log(az.name);
+        console.log(az.age);
+        console.log(az.intro());
+        // 过了一年
+        az.age = 102;
+        console.log(az.name);
+        console.log(az.age);
+        console.log(az.intro());
+
+        //2、使用关键字的形式
+        var az = new Object();
+        az.name = "Angelcfax";
+        az.age = 20;
+        az.intro = function () {
+            return "hello! I am " + this.name + ", I am " + this.age + "!";
+        }
+        console.log(az);
+        console.log(az.name);
+        console.log(az.age);
+        console.log(az.intro());
+
+
+        //3、使用构造函数的形式
+        function Sxstudent(name, age) {
+            this.name = name;
+            this.age = age;
+            this.intro = function () {
+                return "hello! I am " + this.name + ", I am " + this.age + "!";
+            }
+        }
+
+        var az = new Sxstudent("angelc", 20);
+        console.log(az.name);
+        console.log(az.age);
+        console.log(az.intro());
+
+        var za = new Sxstudent("zack", 10);
+        console.log(za.name);
+        console.log(za.age);
+        console.log(za.intro());
+
+        var qw = new Sxstudent("qw", 10);
+        var wq = new Sxstudent("wq", 100);
+        var er = new Sxstudent("er", 10);
+        var ty = new Sxstudent("ty", 1);
+        var uj = new Sxstudent("uj", 104);
+
+
+        //练习：定义一个构造函数Phone 用来表示手机的类型，包含手机名称，手机价格
+        //是否双卡等属性，并且包含一个打电话的方法call(number)
+        function Phone(type, name, price, dbcard) {
+            this.type = type;
+            this.name = name;
+            this.price = price;
+            this.dbcard = dbcard;
+            this.call = function (pnumber) {
+                return "正在拨号" + pnumber + "........";
+            }
+        }
+
+        var qw = new Phone("typec", "apple", 8000, "yes");
+        console.log(qw);
+        console.log(qw.call("12313123123"));
+        var az = new Phone("lighting", "huawei", 11000, "yes");
+        console.log(az);
+        console.log(az.call("32423242432"));
+
+
+        var arr1 = new Array(1, 2, 3, 4, 5);    //创建一个数组实例
+        var date1 = new Date();     //创建一个日期时间实例
+        var xhr = new XMLHttpRequest();     //创建一个ajax实例
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function Sxstudent(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        //构造函数的原型对象，保存所有实例的 共享属性和方法
+        Sxstudent.prototype.className = "21级01班";
+        Sxstudent.prototype.intro = function() {
+            return "hello! I am " + this.name + ", I am " + this.age + "!";
+        }
+
+        var az = new Sxstudent("angelc", 20);
+        console.log(az.className);
+        console.log(az.intro());
+        var za = new Sxstudent("zack", 10);
+        console.log(za.className);
+        console.log(za.intro());
+
+        console.log(az.__proto__);
+        console.log(az.__proto__ == Sxstudent.prototype);
+        console.log(Sxstudent.prototype.constructor === Sxstudent);
+    </script>
+</body>
+</html>
