@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>构造函数</title>
 </head>
 <body>
     <script>
@@ -12,6 +12,7 @@
             this.age = age;
         }
         //构造函数的原型对象，保存所有实例的 共享属性和方法
+        /*
         Sxstudent.prototype.className = "21级01班";
         Sxstudent.prototype.intro = function() {
             return "hello! I am " + this.name + ", I am " + this.age + "!";
@@ -27,6 +28,20 @@
         console.log(az.__proto__);
         console.log(az.__proto__ == Sxstudent.prototype);
         console.log(Sxstudent.prototype.constructor === Sxstudent);
+
+        console.log(az.__proto__.__proto__);
+
+        */
+        var arr1 = [1,2,3,4];       //数组案例
+        arr1.join("/");
+        arr1.sort();
+        arr1.push();
+        arr1.pop();
+
+        var str1 = "ANGELCZACK";        //字符串案例
+        str1.toLowerCase();
+        str1.slice();
+        str1.substring();
     </script>
 </body>
 </html>

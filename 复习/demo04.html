@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //严格模式 默认是不开启的 如果有需要，需要手动启动
+        // name = "Angelczack";
+        // console.log(name);
+
+        // function fn() {
+        //     "use strict";   //开启严格模式  在函数体内启用严格模式
+        // }
+
+        // every()  判断数组中的每一项是否都满足条件，如果都满足返回true，否则返回false
+        var arr1 = [2,4,6,8,10];
+        var bool1 = arr1.every(function(val){        //数组的每一项
+            return val%2==0;
+        })
+        console.log(bool1);
+
+        //some()  判断数组中是否至少有一项满足条件，如果至少有一项满足返回true，否则返回false
+        var arr2 = [1,5,11,3,10];
+        var bool2 = arr2.some(function(val){        //数组的每一项
+            return val%2==0;
+        })
+        console.log(bool2);
+
+        var arr3 = [1,2,3,4,5,4,3,2,1];
+        console.log(arr3.indexOf(3));
+        console.log(arr3.lastIndexOf(3));
+
+        //forEach() 遍历数组 直接修改原数组
+        var arr4 = [3000,4000,5000,6000,7000];
+        arr4.forEach( function (val,i,arr) {
+            // console.log(val);
+            // console.log(i);
+            // console.log(arr);
+
+            return arr[i] = val*1.5;
+        })
+        console.log(arr4);
+    </script>
+
+    
+</body>
+</html>

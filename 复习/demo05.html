@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <script>
+        //模板字符串 `  `
+        var str = {
+            uname: "Angelczack",
+            uage: 25
+        }
+        //js中的字符串是不支持换行的
+        // d1.innerHTML = "<p>姓名:</p>" + str.uname + "<p>年龄:</p>" + str.uage;
+
+        d1.innerHTML = `
+                    <p>
+                    姓名：${str.uname}    
+                    </p> 
+                    <p>
+                    年龄：${str.uage}
+                    </p>
+                    `
+        setTimeout(() => {
+            console.log(100);
+            setTimeout(() => {
+                console.log(200);
+                setTimeout(() => {
+                    console.log(300);
+                }, 2000)
+            }, 2000)
+        }, 2000)
+
+    </script>
+</body>
+
+</html>

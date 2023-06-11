@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 多态：不同对象作用于同一操作，产生不同的效果
+        var arr = [1,2,3,4,5];
+        var date = new Date();
+        var obj = {
+            a:1,
+            b:2
+        }
+        console.log(arr.toString());
+        console.log(date.toString());
+        console.log(obj.toString());
+
+        // 多态的形成
+        console.log(arr.__proto__);
+        console.log(date.__proto__);
+        console.log(obj.__proto__);
+    </script>
+</body>
+</html>
