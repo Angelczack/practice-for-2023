@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // setTimeout(() => {
+        //     console.log("110");
+        // }, 3000)
+
+        // promise ES6的新特性之一  异步编程的解决方案  本身是一个构造函数  用来生成promise实例
+        //三张状态： pending(进行中)    fulfilled(已成功) rejected(已失败)
+        //特点：状态不受外界影响，只有异步操作的结果，决定了处于哪种状态
+        //一旦状态改变，就不会再改变
+        const p = new Promise(function (resolve, reject) {
+            setTimeout(() => {
+                var timer = new Date().getTime();
+                if (timer % 2 == 0) {
+                    resolve("成功的数据"+timer);      //异步操作成功后调用
+                }
+                else {
+                    reject("失败的数据"+timer);       //异步操作失败后调用
+                }
+            }, 3000)
+        });
+        p.then((value)=>{      //如果是已成功的话
+            console.log(value);
+        }).catch((err)=>{       //失败的话
+            console.log(err);
+        }).finally(()=>{
+            console.log("异步操作结束");       //不论成功失败，都会执行
+        })
+    </script>
+</body>
+
+</html>

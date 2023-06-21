@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //默认参数
+        // function addnum(num1=100,num2=100) {    //形参 默认参数     如果传递参数以传递参数为准，如果为传参以默认参数计算
+        //     document.write(num1+num2);
+        // }
+
+        // addnum();       //实参
+
+        //for循环遍历数组
+        // var arr = [1,2,3,4,5];
+        // var obj = {
+        //     uname:"angelczack",
+        //     uage:1001,
+        //     usex:"male"
+        // }
+        // for(var i=0;i<arr.length;i++) {
+        //     // console.log(arr[i]);
+        // }
+
+        // // for in 
+        // for(var value in arr){
+        //     //value是数组的下标
+        //     console.log(value);
+        // }
+        // for(var value in obj){
+        //     //value是对象的属性名
+        //     console.log(value);
+        //     console.log(obj[value]);
+        // }
+
+        const obj = {length:3 , 0:'foo',1:'bar',2:'baz'};
+
+        const array = Array.from(obj);
+        for(const value of array){
+            console.log(value);
+        }
+
+        var student = {
+            uname:"angelc",
+            usex:"female",
+            uage:10000
+        }
+
+        //ES6对象的解构
+        const {uname,uage,usex} = student;
+        console.log(uname);
+        console.log(uage);
+        console.log(usex);
+    </script>
+</body>
+</html>
